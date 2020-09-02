@@ -19,6 +19,7 @@ group :development, :test do
   gem 'faker'
   gem 'factory_bot_rails'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rubocop', '~>0.81.0'
 end
 
 group :development do
