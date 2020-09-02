@@ -1,0 +1,21 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  timeout: 5000
+  username: raj
+  password: R18aja
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: course_tracker_development
+test:
+  <<: *default
+  database: course_tracker_test
+production:
+  <<: *default
+  database: course_tracker_production
+  username: course_tracker
+  password: <%= ENV['COURSE_TRACKER_DATABASE_PASSWORD'] %>
